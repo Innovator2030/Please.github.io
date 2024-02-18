@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3Dmol.js Molecular Visualization</title>
+    <!-- Include 3Dmol.js library -->
+    <script src="https://3dmol.org/build/3Dmol-min.js"></script>
+</head>
+<body>
+    <h1>3Dmol.js Molecular Visualization</h1>
+    <div id="viewer" style="width: 100%; height: 500px;"></div>
+
+    <script>
+        // Create a viewer
+        var viewer = $3Dmol.createViewer('viewer', {backgroundColor: 'white'});
+
+        // Load PDB file
+        viewer.addModel('pdb', 'path/to/your/file.pdb', {}, function() {
+            // Zoom to loaded model
+            viewer.zoomTo();
+        });
+
+        // Render viewer
+        viewer.render();
+    </script>
+</body>
+</html>
